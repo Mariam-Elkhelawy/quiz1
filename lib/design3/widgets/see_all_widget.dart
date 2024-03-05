@@ -12,18 +12,18 @@ class SeeAllWidget extends StatelessWidget {
           seeText,
           style: GoogleFonts.inter(
               fontWeight: FontWeight.w600,
-              color: Color(0xFF371B34),
+              color: const Color(0xFF371B34),
               fontSize: 18),
         ),
-        Spacer(),
+        const Spacer(),
         Text(
           'See all',
           style: GoogleFonts.inter(
               fontWeight: FontWeight.w600,
-              color: Color(0xFF5925DC),
+              color: const Color(0xFF5925DC),
               fontSize: 14),
         ),
-        Icon(
+        const Icon(
           Icons.arrow_forward_ios,
           size: 14,
           color: Color(0xFF5925DC),

@@ -12,11 +12,11 @@ class CustomTextFormField extends StatelessWidget {
         decoration: InputDecoration(
           enabled: false,
           labelText: 'Articles, Video, Audio and More,...',
-          labelStyle: GoogleFonts.inter(color: Color(0xFF667085), fontSize: 16),
-          prefixIcon: Icon(Icons.search),
+          labelStyle: GoogleFonts.inter(color: const Color(0xFF667085), fontSize: 16),
+          prefixIcon: const Icon(Icons.search),
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(8),
-            borderSide: BorderSide(
+            borderSide: const BorderSide(
               color: Color(0xFFD0D5DD),
             ),
           ),

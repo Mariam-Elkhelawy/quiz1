@@ -12,18 +12,18 @@ String seeText;
           seeText,
           style: GoogleFonts.inter(
               fontWeight: FontWeight.w600,
-              color: Color(0xFF371B34),
+              color: const Color(0xFF371B34),
               fontSize: 18),
         ),
-        Spacer(),
+        const Spacer(),
         Text(
           'See more',
           style: GoogleFonts.inter(
               fontWeight: FontWeight.w600,
-              color: Color(0xFF027A48),
+              color: const Color(0xFF027A48),
               fontSize: 14),
         ),
-        Icon(
+        const Icon(
           Icons.arrow_forward_ios,
           size: 14,
           color: Color(0xFF027A48),

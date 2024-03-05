@@ -8,7 +8,7 @@ String feelingName;
   Widget build(BuildContext context) {
     return Column(children: [
       Image.asset(imagePath),
-      SizedBox(
+      const SizedBox(
         height: 3,
       ),
       Text(feelingName)

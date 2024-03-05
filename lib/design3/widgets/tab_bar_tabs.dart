@@ -9,6 +9,10 @@ class TabBarWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      decoration: BoxDecoration(
+          color: const Color(0xFFFCFCFD),
+          border: Border.all(color: const Color(0xFFE4E7EC),),
+          borderRadius: BorderRadius.circular(20)),
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Text(
@@ -17,10 +21,6 @@ class TabBarWidget extends StatelessWidget {
               fontSize: 16, fontWeight: FontWeight.w500),
         ),
       ),
-      decoration: BoxDecoration(
-          color: Color(0xFFFCFCFD),
-          border: Border.all(color: Color(0xFFE4E7EC),),
-          borderRadius: BorderRadius.circular(20)),
     );
   }
 }

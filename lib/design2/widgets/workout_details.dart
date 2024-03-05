@@ -16,12 +16,13 @@ class WorkoutDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Row(
           children: [
             ImageIcon(
               AssetImage(imagePath),
-              color: Color(0xFF717BBC),
+              color: const Color(0xFF717BBC),
             ),
             Text(
               title,

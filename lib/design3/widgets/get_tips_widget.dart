@@ -14,49 +14,53 @@ class GetTipsWidget extends StatelessWidget {
         borderRadius: BorderRadius.circular(8),
       ),
       child: Padding(
-        padding: const EdgeInsets.all(20),
+        padding: const EdgeInsets.only(left:20,right: 20),
         child: Row(
           children: [
-            Image.asset(
-              'assets/images/design3/Doctor.png',
-            ),
+            Column(children: [SizedBox(height: 28,),Image.asset(
+              'assets/images/design3/Doctor.png',height: 170,
+            ),],),
+
             Spacer(),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  """Connect with doctors &
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 22.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    """Connect with doctors &
 get suggestions""",
-                  style: GoogleFonts.inter(
-                      fontSize: 14, fontWeight: FontWeight.w600),
-                ),
-                SizedBox(height: 4),
-                Text(
-                  """Connect now and get
- expert insights """,
-                  style: GoogleFonts.inter(
-                      fontSize: 14, fontWeight: FontWeight.w400),
-                ),
-                SizedBox(height: 6),
-                Container(
-                  width: 110,
-                  height: 40,
-                  child: Center(
-                    child: Text(
-                      'View detail',
-                      style: GoogleFonts.inter(
-                          color: Colors.white,
-                          fontSize: 14,
-                          fontWeight: FontWeight.w600),
+                    style: GoogleFonts.inter(
+                        fontSize: 14, fontWeight: FontWeight.w600),
+                  ),
+                  SizedBox(height: 4),
+                  Text(
+                    """Connect now and get
+expert insights """,
+                    style: GoogleFonts.inter(
+                        fontSize: 14, fontWeight: FontWeight.w400),
+                  ),
+                  SizedBox(height: 6),
+                  Container(
+                    width: 110,
+                    height: 40,
+                    child: Center(
+                      child: Text(
+                        'View detail',
+                        style: GoogleFonts.inter(
+                            color: Colors.white,
+                            fontSize: 14,
+                            fontWeight: FontWeight.w600),
+                      ),
                     ),
-                  ),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8),
-                    color: Color(0xFF7F56D9),
-                  ),
-                )
-              ],
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(8),
+                      color: Color(0xFF7F56D9),
+                    ),
+                  )
+                ],
+              ),
             ),
           ],
         ),

@@ -10,6 +10,10 @@ class FeatureWidget extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 14,horizontal: 6),
       child: Container(
         height: 170,
+        decoration: BoxDecoration(
+          color: const Color(0xFFECFDF3),
+          borderRadius: BorderRadius.circular(16),
+        ),
         child: Padding(
           padding: const EdgeInsets.all(15),
           child: Row(
@@ -18,17 +22,17 @@ class FeatureWidget extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SizedBox(
+                  const SizedBox(
                     height: 4,
                   ),
                   Text(
                     'Positive vibes',
                     style: GoogleFonts.inter(
-                        color: Color(0xFF344054),
+                        color: const Color(0xFF344054),
                         fontWeight: FontWeight.w600,
                         fontSize: 16),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 4,
                   ),
                   Text(
@@ -36,16 +40,16 @@ class FeatureWidget extends StatelessWidget {
 positive vibes""",
                     style: GoogleFonts.inter(fontSize: 16),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 8,
                   ),
                   Row(
                     children: [
-                      Icon(
+                      const Icon(
                         Icons.play_circle,
                         color: Color(0xFF32D583),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 4,
                       ),
                       Text(
@@ -57,14 +61,10 @@ positive vibes""",
                   )
                 ],
               ),
-              Spacer(),
+              const Spacer(),
               Image.asset('assets/images/design1/Walking.png')
             ],
           ),
-        ),
-        decoration: BoxDecoration(
-          color: Color(0xFFECFDF3),
-          borderRadius: BorderRadius.circular(16),
         ),
       ),
     );

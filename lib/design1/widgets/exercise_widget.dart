@@ -15,11 +15,13 @@ class ExercisesWidget extends StatelessWidget {
     return Container(
       width: 155,
       height: 60,
+      decoration:
+          BoxDecoration(borderRadius: BorderRadius.circular(8), color: color),
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 12),
         child: Row(
           children: [
-            Image.asset(imagePath),SizedBox(width: 10,),
+            Image.asset(imagePath),const SizedBox(width: 10,),
             Text(
               exerciseName,
               style: GoogleFonts.inter(fontSize: 14, fontWeight: FontWeight.w500),
@@ -27,8 +29,6 @@ class ExercisesWidget extends StatelessWidget {
           ],
         ),
       ),
-      decoration:
-          BoxDecoration(borderRadius: BorderRadius.circular(8), color: color),
     );
   }
 }

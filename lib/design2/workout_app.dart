@@ -23,48 +23,49 @@ class _WorkoutAppState extends State<WorkoutApp> {
           padding: const EdgeInsets.symmetric(horizontal: 24),
           child: ListView(
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
-              Container(
-                child: Row(
-                  children: [
-                    Image.asset('assets/images/design2/logo2.png'),
-                    SizedBox(
-                      width: 20,
-                    ),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Hello, Jade',
-                          style: GoogleFonts.inter(fontSize: 16),
-                        ),
-                        Text(
-                          'Ready to workout?',
-                          style: GoogleFonts.inter(
-                              fontSize: 18, fontWeight: FontWeight.w600),
-                        ),
-                      ],
-                    ),
-                    Spacer(),
-                    badges.Badge(
-                      position:
-                          badges.BadgePosition.custom(bottom: 13, start: 13),
-                      badgeAnimation: badges.BadgeAnimation.slide(
-                        animationDuration: Duration(seconds: 2),
+              Row(
+                children: [
+                  Image.asset('assets/images/design2/logo2.png'),
+                  const SizedBox(
+                    width: 20,
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Hello, Jade',
+                        style: GoogleFonts.inter(fontSize: 16),
                       ),
-                      child: Icon(Icons.notifications_none_sharp),
-                      badgeStyle: badges.BadgeStyle(
-                        badgeColor: Color(0xFFF04438),
+                      Text(
+                        'Ready to workout?',
+                        style: GoogleFonts.inter(
+                            fontSize: 18, fontWeight: FontWeight.w600),
                       ),
+                    ],
+                  ),
+                  const Spacer(),
+                  badges.Badge(
+                    position:
+                        badges.BadgePosition.custom(bottom: 13, start: 13),
+                    badgeAnimation: const badges.BadgeAnimation.slide(
+                      animationDuration: Duration(seconds: 2),
                     ),
-                  ],
-                ),
+                    badgeStyle: const badges.BadgeStyle(
+                      badgeColor: Color(0xFFF04438),
+                    ),
+                    child: const Icon(Icons.notifications_none_sharp),
+                  ),
+                ],
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Container(
                 height: 85,
+                decoration: BoxDecoration(
+                    color: const Color(0xFFF8F9FC),
+                    borderRadius: BorderRadius.circular(8)),
                 child: Padding(
                   padding:
                       const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
@@ -79,7 +80,7 @@ class _WorkoutAppState extends State<WorkoutApp> {
                       Container(
                         width: 1,
                         height: 55,
-                        color: Color(0xFFD9D9D9),
+                        color: const Color(0xFFD9D9D9),
                       ),
                       WorkoutDetails(
                           imagePath: 'assets/images/design2/list.png',
@@ -89,7 +90,7 @@ class _WorkoutAppState extends State<WorkoutApp> {
                       Container(
                         width: 1,
                         height: 55,
-                        color: Color(0xFFD9D9D9),
+                        color: const Color(0xFFD9D9D9),
                       ),
                       WorkoutDetails(
                           imagePath: 'assets/images/design2/calo.png',
@@ -99,21 +100,26 @@ class _WorkoutAppState extends State<WorkoutApp> {
                     ],
                   ),
                 ),
-                decoration: BoxDecoration(
-                    color: Color(0xFFF8F9FC),
-                    borderRadius: BorderRadius.circular(8)),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Text(
                 'Workout Programs',
                 style: GoogleFonts.inter(
                     fontWeight: FontWeight.w600, fontSize: 18),
               ),
+              const SizedBox(height: 16),
               TabBar(
-                unselectedLabelColor: Color(0xFF667085),
-                labelColor: Color(0xFF363F72),
-                indicatorColor: Color(0xFF363F72),
-                tabs: [
+                isScrollable: true,
+                tabAlignment: TabAlignment.start,
+                labelStyle: GoogleFonts.inter(
+                  fontSize: 18,
+                  fontWeight: FontWeight.w500,
+                  color: const Color(0xFF363F72),
+                ),
+                indicatorWeight: .5,
+                unselectedLabelColor: const Color(0xFF667085),
+                indicatorColor: const Color(0xFF363F72),
+                tabs: const [
                   Tab(
                     text: 'All Type',
                   ),
@@ -128,25 +134,25 @@ class _WorkoutAppState extends State<WorkoutApp> {
                   ),
                 ],
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 24),
               ProgramWidget(
                   imagePath: 'assets/images/design2/girl1.png',
                   dayNum: '7 days',
                   programDec: 'Improve mental focus.',
                   programName: 'Morning Yoga'),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               ProgramWidget(
                   imagePath: 'assets/images/design2/girl2.png',
                   dayNum: '3 days',
                   programDec: 'Improve posture and stability.',
                   programName: 'Plank Exercise'),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               ProgramWidget(
                   imagePath: 'assets/images/design2/girl2.png',
                   dayNum: '3 days',
                   programDec: 'Improve posture and stability.',
                   programName: 'Plank Exercise'),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
             ],
           ),
         ),
@@ -179,7 +185,8 @@ class _WorkoutAppState extends State<WorkoutApp> {
               ),
               BottomNavigationBarItem(
                 label: '',
-                icon: buildDotIndicator(2, 'assets/images/design2/bar-chart.png'),
+                icon:
+                    buildDotIndicator(2, 'assets/images/design2/bar-chart.png'),
               ),
               BottomNavigationBarItem(
                 label: '',

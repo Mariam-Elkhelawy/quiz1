@@ -17,8 +17,8 @@ class ProgramWidget extends StatelessWidget {
     return Container(
       height: 180,
       decoration: BoxDecoration(
-        border: Border.all(color: Color(0xFFEAECF5)),
-        color: Color(0xFFF8F9FC),
+        border: Border.all(color: const Color(0xFFEAECF5)),
+        color: const Color(0xFFF8F9FC),
         borderRadius: BorderRadius.circular(8),
       ),
       child: Padding(
@@ -39,28 +39,28 @@ class ProgramWidget extends StatelessWidget {
                     ),
                   ),
                   decoration: BoxDecoration(
-                      color: Color(0xFFFCFCFD),
-                      border: Border.all(color: Color(0xFFE4E7EC),),
+                      color: const Color(0xFFFCFCFD),
+                      border: Border.all(color: const Color(0xFFE4E7EC),),
                       borderRadius: BorderRadius.circular(20)),
-                ),SizedBox(height: 6),
+                ),const SizedBox(height: 6),
                 Text(
                   programName,
                   style: GoogleFonts.inter(
                       fontSize: 20, fontWeight: FontWeight.w600),
-                ),SizedBox(height: 2),
+                ),const SizedBox(height: 2),
                 Text(
                   programDec,
                   style: GoogleFonts.inter(
                       fontSize: 12, fontWeight: FontWeight.w400),
-                ),SizedBox(height: 2),
+                ),const SizedBox(height: 2),
                 Row(
                   children: [
-                    Icon(
+                    const Icon(
                       Icons.access_time_outlined,
                       size: 18,
                       color: Color(0xFF101828),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 6,
                     ),
                     Text(
@@ -72,7 +72,7 @@ class ProgramWidget extends StatelessWidget {
                 )
               ],
             ),
-            Spacer(),
+            const Spacer(),
             Image.asset(imagePath,width: 145,)
           ],
         ),
